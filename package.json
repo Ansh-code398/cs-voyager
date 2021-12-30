@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next build && next export",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-brands-svg-icons": "^5.15.4",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/react-fontawesome": "^0.1.16",
+    "axios": "^0.24.0",
+    "font-awesome": "^4.7.0",
+    "fontawesome": "^5.6.3",
+    "html-react-parser": "^1.4.3",
+    "moment": "^2.29.1",
+    "next": "latest",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-multi-carousel": "^2.6.5",
+    "react-pageflip": "^2.0.3",
+    "react-pdf-flipbook": "^0.1.6",
+    "react-pdf-to-image": "^1.0.2",
+    "sass": "^1.45.0",
+    "validator": "^13.7.0",
+    "worker-loader": "^3.0.8"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.4",
+    "tailwindcss": "^3.0.0"
+  }
+}
