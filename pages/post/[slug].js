@@ -7,19 +7,22 @@ import axios from 'axios';
 
 
 const PostDetails = ( props ) => {
-  const {post} = props;
+  const { post } = props;
   const router = useRouter();
 
   if (router.isFallback) {
     return <Loader />;
   }
   
-  const [PostDetails, setPostDetails] = useState(post);
+  const [PostDetails, setPostDetails] = useState(null);
   useEffect(() => {
-    axios.get(`https://csvoyager-api.vercel.app/api/posts/${props.slug}`)
-    .then(res => {
-      setPostDetails(res);
-    });
+    
+    const data = async () => {
+     const d = await axios.get(`https://csvoyager-api.vercel.app/api/posts/${props.slug}`)
+     setPostDetails(d.data);
+    }
+    data()
+    
   }, []);
   return (
     <>
@@ -34,7 +37,7 @@ const PostDetails = ( props ) => {
       <div className="container mx-auto px-10 mb-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="col-span-1 lg:col-span-12">
-            <PostDetail post={post} />
+            {PostDetails ? <PostDetail post={PostDetails}/> :  <PostDetail post={props.post} />}
           </div>
         </div>
       </div>

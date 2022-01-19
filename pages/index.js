@@ -70,7 +70,6 @@ const index = () => {
                 </div>
                 {/* Rounded Rectangle */}
                 <div className="
-          overflow-hidden
           hidden
           md:block
           overflow-hidden
