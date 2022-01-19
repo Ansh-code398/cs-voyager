@@ -10,6 +10,13 @@ const PostDetails = ({ post }) => {
   if (router.isFallback) {
     return <Loader />;
   }
+  const refreshData = () => {
+    router.replace(router.asPath);
+  }
+  useEffect(() => {
+     refreshData()
+  }, [])
+  
   return (
     <>
       <Head>
