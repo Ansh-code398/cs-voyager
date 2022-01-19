@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { PostDetail, Loader } from '../../components/index.js';
 import { getPosts, getPostDetails } from '../../services/index.js';
 import Head from 'next/head';
+import { useEffect } from 'react';
 
 const PostDetails = ({ post }) => {
   const router = useRouter();
@@ -16,7 +17,7 @@ const PostDetails = ({ post }) => {
   useEffect(() => {
      refreshData()
   }, [])
-  
+
   return (
     <>
       <Head>
