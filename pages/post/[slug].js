@@ -1,23 +1,26 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { useRouter } from 'next/router';
 import { PostDetail, Loader } from '../../components/index.js';
 import { getPosts, getPostDetails } from '../../services/index.js';
 import Head from 'next/head';
-import { useEffect } from 'react';
+import axios from 'axios';
 
-const PostDetails = ({ post }) => {
+
+const PostDetails = ( props ) => {
+  const {post} = props;
   const router = useRouter();
 
   if (router.isFallback) {
     return <Loader />;
   }
-  const refreshData = () => {
-    router.replace(router.asPath);
-  }
+  
+  const [PostDetails, setPostDetails] = useState(post);
   useEffect(() => {
-     refreshData()
-  }, [])
-
+    axios.get(`https://csvoyager-api.vercel.app/api/posts/${props.slug}`)
+    .then(res => {
+      setPostDetails(res);
+    });
+  }, []);
   return (
     <>
       <Head>
@@ -46,7 +49,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       post: data,
-      revalidate: 10,
+      slug: params.slug
     },
   };
 }
