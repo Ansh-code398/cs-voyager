@@ -14,7 +14,7 @@ const PostDetail = ({ post }) => {
 
   return (
     <>
-      <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
+      <div className="bg-black shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
         <div className="relative overflow-hidden shadow-md mb-6">
           <img src={post.featuredImage.url} alt="" className="object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
         </div>
@@ -29,25 +29,25 @@ const PostDetail = ({ post }) => {
                 className="align-middle rounded-full"
                 src={post.author.photo.url}
               />
-              <p className="inline align-middle text-gray-700 ml-2 font-medium text-lg">{post.author.name}</p>
+              <p className="inline align-middle text-gray-200 ml-2 font-medium text-lg">{post.author.name}</p>
             </div>
-            <div className="font-medium text-gray-700">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline mr-2 text-teal-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="font-medium text-gray-200">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline mr-2 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
               <span className="align-middle">{moment(post.createdAt).format('MMM DD, YYYY')}</span>
             </div>
           </div>
-          <h1 className="mb-8 text-3xl font-semibold text-center">{post.title}</h1>
-          <p className="text-gray-500 text-center my-4">{post.exerpt}</p>
-          <h1 className="text-2xl text-center my-16 break-all">{post.desc}</h1>
-          {pages && pages.length > 0 && <div className="w-full">
-            <h1 className="text-xl font-semibold mb-4">FlipBook</h1>
-            <HTMLFlipBook width={400} height={1414.2 / 2.5} ref={book} className='w-full'>
+          <h1 className="mb-8 text-3xl text-white font-semibold text-center">{post.title}</h1>
+          <p className="text-gray-200 text-center my-4">{post.exerpt}</p>
+          <h1 className="text-2xl text-center text-white my-16 break-all">{post.desc}</h1>
+          {pages && pages.length > 0 && <div className="w-full text-center sm:overflow-hidden overflow-auto">
+            <h1 className="text-xl font-semibold mb-4 text-white">FlipBook</h1>
+            <HTMLFlipBook width={400} height={1414.2 / 2.5} ref={book} className='w-full mx-auto'>
               {pages.map((page, index) => {
                 return (
                   <div key={index}>
-                    <div className="flex items-center justify-center w-full h-full bg-white"><img src={page}></img></div>
+                    <div className="flex items-center justify-center w-full h-full bg-black"><img src={page}></img></div>
                   </div>
                 )
               })}

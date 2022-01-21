@@ -29,12 +29,12 @@ const PostDetails = ( props ) => {
       <Head>
         <title>{post.title}</title>
         <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon"/>
-        <meta name="og:description" content={`${post.excerpt} by ${post.author.name}`} />
+        <meta name="og:description" content={`${post.exerpt} by ${post.author.name}`} />
         <meta name="og:image" content={post.featuredImage.url} />
         <meta name="og:title" content={post.title} />
         <meta name="og:url" content={`https://csvoyager.vercel.app/post/${post.slug}`} />
       </Head>
-      <div className="container mx-auto px-10 mb-8">
+      <div className="container bg-black mx-auto px-10 mb-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="col-span-1 lg:col-span-12">
             {PostDetails ? <PostDetail post={PostDetails}/> :  <PostDetail post={props.post} />}
