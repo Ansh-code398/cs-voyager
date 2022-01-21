@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Loader = () => (
+  <div className="min-w-screen min-h-screen flex justify-center items-center">
   <div className="text-center">
     <button
       type="button"
@@ -13,6 +14,7 @@ const Loader = () => (
       </svg>
       Loading
     </button>
+  </div>
   </div>
 );
 
