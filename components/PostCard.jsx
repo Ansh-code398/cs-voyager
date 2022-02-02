@@ -11,7 +11,13 @@ const PostCard = ({ post, anim }) => (
       <div className="flex flex-col justify-between p-4 leading-normal">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-white">{post.title}</h5>
         <p className="mb-3 font-normal text-gray-400">{post.exerpt}</p>
-        <span>Author - {post.author.name}</span>
+        <span>Author - <img
+          src={post.author.photo.url}
+          alt={post.author.name}
+          height="30px"
+          width="30px"
+          className="align-middle rounded-full inline"
+        /> {post.author.name}</span>
         <Link href="/post/[slug]" as={`/post/${post.slug}`}>
           <a className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white transition-all duration-500 hover:border-transparent hover:text-teal-500 hover:bg-white mt-4" style={{maxWidth: '120px', minWidth: '120px'}}>Read more</a>
         </Link>
