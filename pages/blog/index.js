@@ -29,7 +29,7 @@ export default function Home({posts}) {
         <title>Blog</title>
       </Head>
       <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
-        <div className='lg:col-span-12 col-span-1'>
+        <div className='lg:col-span-12 col-span-1 overflow-hidden'>
           {posts && posts.map((post) => <PostCard post={post} key={post.title} anim={chooseAnimation} />)}
         </div>
       </div>
