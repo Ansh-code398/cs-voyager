@@ -27,7 +27,7 @@ const index = () => {
     }
 
     return (
-        <div className="overflow-x-hidden text-white bg-[#131313]">
+        <div className="overflow-hidden text-white bg-[#131313]">
             <Head>
                 <title>Home</title>
             </Head>
@@ -72,9 +72,27 @@ const index = () => {
           -bottom-28
           lg:-right-36
         " />
+        {/* Subscribe Us */}
+        <section className="bg-bookmark-purple text-white py-20 mt-20 lg:mt-40" id="subscribe" data-aos="zoom-in">
+                <div className="container">
+                    <div className="sm:w-3/4 lg:w-2/4 mx-auto">
+                        <p className="font-light uppercase text-center mb-8">We have 100+ members joined</p>
+                        <h1 className="text-3xl text-center" >Subscribe to our newsletter</h1>
+                        <form className="flex flex-col sm:flex-row gap-6 mt-8" onSubmit={onSubscribeClick}>
+                            <input type="email" placeholder="Enter your email address" className="focus:outline-none flex-1 px-2 py-3 rounded-md text-black" ref={SubscribeEmail} required />
+                            <button type="submit" className="btn bg-bookmark-red hover:bg-bookmark-white hover:text-black" value='Subsribe'>
+                                Subscribe
+                            </button>
+
+                        </form>
+                        {emailErr && <p className="font-light uppercase text-center mt-8 text-yellow-300">{emailErr}</p>}
+                        {emailSuccess && <p className="font-light uppercase text-center mt-8 text-teal-300">{emailSuccess}</p>}
+                    </div>
+                </div>
+            </section>
             </section>
             {/* Features */}
-            <section className="py-20 mt-20 lg:mt-60" >
+            <section className="py-20 mt-20 lg:mt-40" >
                 {/* Heading */}
                 <div className="sm:w-3/4 lg:w-5/12 mx-auto px-2">
                     <h1 className="text-3xl text-center text-bookmark-white">About Us</h1>
@@ -464,24 +482,7 @@ const index = () => {
             </section>
 
 
-            {/* Subscribe Us */}
-            <section className="bg-bookmark-purple text-white py-20" id="subscribe" data-aos="zoom-in">
-                <div className="container">
-                    <div className="sm:w-3/4 lg:w-2/4 mx-auto">
-                        <p className="font-light uppercase text-center mb-8">We have 100+ members joined</p>
-                        <h1 className="text-3xl text-center" >Subscribe to our newsletter</h1>
-                        <form className="flex flex-col sm:flex-row gap-6 mt-8" onSubmit={onSubscribeClick}>
-                            <input type="email" placeholder="Enter your email address" className="focus:outline-none flex-1 px-2 py-3 rounded-md text-black" ref={SubscribeEmail} required />
-                            <button type="submit" className="btn bg-bookmark-red hover:bg-bookmark-white hover:text-black" value='Subsribe'>
-                                Subscribe
-                            </button>
-
-                        </form>
-                        {emailErr && <p className="font-light uppercase text-center mt-8 text-yellow-300">{emailErr}</p>}
-                        {emailSuccess && <p className="font-light uppercase text-center mt-8 text-teal-300">{emailSuccess}</p>}
-                    </div>
-                </div>
-            </section>
+        
         </div>
     );
 }
