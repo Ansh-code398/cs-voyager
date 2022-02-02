@@ -5,8 +5,8 @@ import Link from 'next/link';
 
 import { grpahCMSImageLoader } from '../util.js';
 
-const PostCard = ({ post }) => (
-  <div className="shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8 bg-black border-white border-2">
+const PostCard = ({ post, anim }) => (
+  <div className="shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8 bg-[#131313] shadow-black" data-aos={anim()}>
     <div className="relative overflow-hidden shadow-md pb-80 mb-6 w-auto h-auto ">
       <img src={post.featuredImage.url} alt="" className="object-center object-contain w-full h-full absolute shadow-lg rounded-t-lg lg:rounded-lg" />
     </div>

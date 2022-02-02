@@ -11,10 +11,9 @@ const PostDetail = ({ post }) => {
   }, [post])
   const book = useRef();
   const pageToGo = useRef();
-
   return (
     <>
-      <div className="bg-black shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
+      <div className="bg-[#131313] shadow-2xl shadow-black rounded-lg lg:p-8 pb-12 mb-8">
         <div className="relative overflow-hidden shadow-md mb-6">
           <img src={post.featuredImage.url} alt="" className="object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
         </div>
@@ -47,7 +46,7 @@ const PostDetail = ({ post }) => {
               {pages.map((page, index) => {
                 return (
                   <div key={index}>
-                    <div className="flex items-center justify-center w-full h-full bg-black"><img src={page}></img></div>
+                    <div className="flex items-center justify-center w-full h-full bg-[#131313]"><img src={page}></img></div>
                   </div>
                 )
               })}

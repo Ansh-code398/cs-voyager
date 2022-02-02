@@ -27,12 +27,12 @@ const index = () => {
     }
 
     return (
-        <div className="overflow-x-hidden text-white bg-black">
+        <div className="overflow-x-hidden text-white bg-[#131313]">
             <Head>
                 <title>Home</title>
             </Head>
 
-            <section className="relative overflow-hidden">
+            <section className="relative overflow-hidden" data-aos="fade-up">
                 <div className="container flex flex-col-reverse lg:flex-row items-center gap-12 mt-14 lg:mt-28">
                     {/* Content */}
                     <div className="flex flex-1 flex-col items-center lg:items-start">
@@ -74,7 +74,7 @@ const index = () => {
         " />
             </section>
             {/* Features */}
-            <section className="py-20 mt-20 lg:mt-60">
+            <section className="py-20 mt-20 lg:mt-60" >
                 {/* Heading */}
                 <div className="sm:w-3/4 lg:w-5/12 mx-auto px-2">
                     <h1 className="text-3xl text-center text-bookmark-white">About Us</h1>
@@ -86,7 +86,7 @@ const index = () => {
                     <h1 className="text-3xl text-center text-bookmark-white">Features</h1>
                 </div>
                 {/* Feature #1 */}
-                <div className="relative mt-20 lg:mt-24">
+                <div className="relative mt-20 lg:mt-24" data-aos="fade-right">
                     <div className="container flex flex-col lg:flex-row items-center justify-center gap-x-24">
                         {/* Image */}
                         <div className="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
@@ -115,7 +115,7 @@ const index = () => {
           " />
                 </div>
                 {/* Feature #2 */}
-                <div className="relative mt-20 lg:mt-52">
+                <div className="relative mt-20 lg:mt-52" data-aos="fade-left">
                     <div className="container flex flex-col lg:flex-row-reverse items-center justify-center gap-x-24">
                         {/* Image */}
                         <div className="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
@@ -145,7 +145,7 @@ const index = () => {
           " />
                 </div>
                 {/* Feature #3 */}
-                <div className="relative mt-20 lg:mt-52">
+                <div className="relative mt-20 lg:mt-52" data-aos="fade-right">
                     <div className="container flex flex-col lg:flex-row items-center justify-center gap-x-24">
                         {/* Image */}
                         <div className="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
@@ -174,7 +174,7 @@ const index = () => {
           " />
                 </div>
                 {/* Feature 4 */}
-                <div className="relative mt-20 lg:mt-52">
+                <div className="relative mt-20 lg:mt-52" data-aos="fade-left">
                     <div className="container flex flex-col lg:flex-row-reverse items-center justify-center gap-x-24">
                         {/* Image */}
                         <div className="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
@@ -204,7 +204,7 @@ const index = () => {
           " />
                 </div>
                 {/* Feature #5 */}
-                <div className="relative mt-20 lg:mt-52">
+                <div className="relative mt-20 lg:mt-52" data-aos="fade-right">
                     <div className="container flex flex-col lg:flex-row items-center justify-center gap-x-24">
                         {/* Image */}
                         <div className="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
@@ -234,7 +234,7 @@ const index = () => {
           " />
                 </div>
             </section>
-            {/* Download */}
+            {/* Team */}
             <section className="py-20 mt-20">
                 {/* Heading */}
                 <div className="sm:w-3/4 lg:w-5/12 mx-auto px-2">
@@ -246,7 +246,7 @@ const index = () => {
                 {/* Cards */}
                 <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 max-w-screen-lg mt-16">
                     {/* Card 1 */}
-                    <div className="flex flex-col rounded-md shadow-md border-2 border-white lg:mb-16">
+                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
                         <div className="p-6 flex flex-col items-center">
                             <img src="./img/team/team-KY.jpeg" alt="" className="rounded-full h-64" />
                             <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Krish Yadav</h3>
@@ -260,7 +260,7 @@ const index = () => {
                         </div>
                     </div>
                     {/* Card 2 */}
-                    <div className="flex flex-col rounded-md shadow-md border-2 border-white lg:mb-16">
+                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
                         <div className="p-6 flex flex-col items-center mw-16 mh-16">
                             <img src="./img/team/team-PS.png" alt="" className="rounded-full h-64" />
                             <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Pragyan Srivastava</h3>
@@ -277,7 +277,7 @@ const index = () => {
                         </div>
                     </div>
                     {/* Card 3 */}
-                    <div className="flex flex-col rounded-md shadow-md border-2 border-white lg:mb-16">
+                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
                         <div className="p-6 flex flex-col items-center">
                             <img src="./img/team/team-NR.jpg" alt="" className="rounded-full h-64" />
                             <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Neha Reddy</h3>
@@ -285,7 +285,7 @@ const index = () => {
                         </div>
                     </div>
                     {/* Card 4 */}
-                    <div className="flex flex-col rounded-md shadow-md border-2 border-white lg:mb-16">
+                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
                         <div className="p-6 flex flex-col items-center">
                             <img src="./img/team/team-ABG.jpg" alt="" className="rounded-full h-64" />
                             <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Alvin Ben George</h3>
@@ -293,7 +293,7 @@ const index = () => {
                         </div>
                     </div>
                     {/* Card 5 */}
-                    <div className="flex flex-col rounded-md shadow-md border-2 border-white lg:mb-16">
+                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
                         <div className="p-6 flex flex-col items-center">
                             <img src="./img/team/team-na.jpeg" alt="" className="rounded-full h-64" />
                             <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Neev Agrawal</h3>
@@ -302,7 +302,7 @@ const index = () => {
 
                     </div>
                     {/* Card 6 */}
-                    <div className="flex flex-col rounded-md shadow-md border-2 border-white lg:mb-16">
+                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
                         <div className="p-6 flex flex-col items-center">
                             <img src="https://media.discordapp.net/attachments/870055656865021953/875222882601554000/SPOILER_unknown.png" alt="" className="rounded-full h-64" />
                             <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Surya Vardhan</h3>
@@ -316,7 +316,7 @@ const index = () => {
                         </div>
                     </div>
                     {/* Card 7 */}
-                    <div className="flex flex-col rounded-md shadow-md border-2 border-white lg:mb-16">
+                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
                         <div className="p-6 flex flex-col items-center">
                             <img src="./img/team/team-BB.jpeg" alt="" className="rounded-full h-64" />
                             <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Bhuvi Bist</h3>
@@ -325,7 +325,7 @@ const index = () => {
 
                     </div>
                     {/* Card 8 */}
-                    <div className="flex flex-col rounded-md shadow-md border-2 border-white lg:mb-16">
+                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
                         <div className="p-6 flex flex-col items-center">
                             <img src="./img/team/team-ra.jpg" alt="" className="rounded-full h-64" />
                             <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Riya Agrawal</h3>
@@ -334,7 +334,7 @@ const index = () => {
 
                     </div>
                     {/* Card 9 */}
-                    <div className="flex flex-col rounded-md shadow-md border-2 border-white lg:mb-16">
+                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
                         <div className="p-6 flex flex-col items-center">
                             <img src="/img/team/Team-YY.jpg" alt="" className="rounded-full h-64" />
                             <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Yash Yadav</h3>
@@ -343,7 +343,7 @@ const index = () => {
 
                     </div>
                     {/* Card 10 */}
-                    <div className="flex flex-col rounded-md shadow-md border-2 border-white lg:mb-16">
+                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
                         <div className="p-6 flex flex-col items-center">
                             <img src="./img/team/team-KJ.jpg" alt="" className="rounded-full h-64" />
                             <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Kavyansh Jain</h3>
@@ -354,7 +354,7 @@ const index = () => {
                         </div>
                     </div>
                     {/* Card 11 */}
-                    <div className="flex flex-col rounded-md shadow-md border-2 border-white lg:mb-16">
+                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
                         <div className="p-6 flex flex-col items-center">
                             <img src="./img/team/team-AT.jpeg" alt="" className="rounded-full h-64" />
                             <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Ansh Tulsyan</h3>
@@ -368,7 +368,7 @@ const index = () => {
                         </div>
                     </div>
                     {/* Card 12 */}
-                    <div className="flex flex-col rounded-md shadow-md border-2 border-white lg:mb-16">
+                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
                         <div className="p-6 flex flex-col items-center">
                             <img src="./img/team/hacker.png" alt="" className="rounded-full h-64" />
                             <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Suraj Kumar</h3>
@@ -376,7 +376,7 @@ const index = () => {
                         </div>
                     </div>
                     {/* Card 13 */}
-                    <div className="flex flex-col rounded-md shadow-md border-2 border-white lg:mb-16">
+                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
                         <div className="p-6 flex flex-col items-center">
                             <img src="./img/team/team-RR.jpg" alt="" className="rounded-full h-64" />
                             <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Raihan Riyaz</h3>
@@ -384,7 +384,7 @@ const index = () => {
                         </div>
                     </div>
                     {/* Card 14 */}
-                    <div className="flex flex-col rounded-md shadow-md border-2 border-white lg:mb-16">
+                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
                         <div className="p-6 flex flex-col items-center">
                             <img src="./img/team/team-KN.png" alt="" className="rounded-full h-64" />
                             <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Krishna Nagpal</h3>
@@ -392,7 +392,7 @@ const index = () => {
                         </div>
                     </div>
                     {/* Card 15 */}
-                    <div className="flex flex-col rounded-md shadow-md border-2 border-white lg:mb-16">
+                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
                         <div className="p-6 flex flex-col items-center">
                             <img src="./img/team/team-YVK.jpg" alt="" className="rounded-full h-64" />
                             <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Yash Vardhan Kapil</h3>
@@ -409,14 +409,14 @@ const index = () => {
                         </div>
                     </div>
                     {/* Card 16 */}
-                    <div className="flex flex-col rounded-md shadow-md border-2 border-white lg:mb-16">
+                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
                         <div className="p-6 flex flex-col items-center">
                             <img src="./img/team/team-DG.jpg" alt="" className="rounded-full h-64" />
                             <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Diptesh Gupta</h3>
                             <p className="mb-2 text-bookmark-grey font-light">WRITING TEAM</p>
                         </div>
                     </div>
-                    <div className="flex flex-col rounded-md shadow-md border-2 border-white lg:mb-16">
+                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
                         <div className="p-6 flex flex-col items-center mw-16 mh-16">
                             <img src="./img/team/AS.jpg" alt="" className="rounded-full h-64" />
                             <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Ansh Sharma</h3>
@@ -435,7 +435,7 @@ const index = () => {
                 </div>
             </section>
             {/* FAQ */}
-            <section className="bg-black text-white py-20">
+            <section className="bg-[#131313] text-white py-20">
                 <div className="container">
                     {/* Heading */}
                     <div className="sm:w-3/4 lg:w-5/12 mx-auto px-2">
@@ -446,16 +446,16 @@ const index = () => {
                     </div>
                     {/* FAQ Items */}
                     <div className="flex flex-col sm:w-3/4 lg:w-5/12 mt-12 mx-auto">
-                        <div className="flex items-center border-b py-4 cursor-pointer btn hover:btn-purple my-2">
+                        <div className="flex items-center border-b py-4 cursor-pointer btn hover:btn-purple my-2" data-aos="fade-down">
                             <details className="flex-1"><summary>What is CS Voyager?</summary><p>CS Voyager is a newsletter launched by technology enthusiast students to spread knowledge and increase interest about Computer Science amongst the younger generation!</p></details>
                         </div>
-                        <div className="flex items-center border-b py-4 cursor-pointer btn hover:btn-purple my-2">
+                        <div className="flex items-center border-b py-4 cursor-pointer btn hover:btn-purple my-2"data-aos="fade-left">
                             <details className="flex-1"><summary>When does the newsletter get updated?</summary><p>The newsletter is updated on the 7th of each month.</p></details>
                         </div>
-                        <div className="flex items-center border-b py-4 cursor-pointer btn hover:btn-purple my-2">
+                        <div className="flex items-center border-b py-4 cursor-pointer btn hover:btn-purple my-2" data-aos="fade-right">
                             <details className="flex-1"><summary>Why should you read CS Voyager?</summary><p>CS Voyager helps you to learn more about technology. We include articles on great inventions using technology which will help you learn more about the Computer Science field and will increase your curiosity and interest for learning more!</p></details>
                         </div>
-                        <div className="flex items-center border-b py-4 cursor-pointer btn hover:btn-purple my-2">
+                        <div className="flex items-center border-b py-4 cursor-pointer btn hover:btn-purple my-2" data-aos="fade-up">
                             <details className="flex-1"><summary>Who should read CS Voyager?</summary><p>Are you interested in learning about Computer Science? Are you a technology enthusiast? Are you curious about inventions done with Computer Science? Then this website is the one for you! Go for it!</p></details>
                         </div>
 
@@ -465,7 +465,7 @@ const index = () => {
 
 
             {/* Subscribe Us */}
-            <section className="bg-bookmark-purple text-white py-20" id="subscribe">
+            <section className="bg-bookmark-purple text-white py-20" id="subscribe" data-aos="zoom-in">
                 <div className="container">
                     <div className="sm:w-3/4 lg:w-2/4 mx-auto">
                         <p className="font-light uppercase text-center mb-8">We have 100+ members joined</p>
