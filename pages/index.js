@@ -5,7 +5,7 @@ import { useRef, useState } from "react";
 import validator from 'validator'
 import axios from "axios";
 
-const index = () => {
+const index = ({team}) => {
     const [emailErr, setEmailErr] = useState(null)
     const [emailSuccess, setEmailSuccess] = useState(null)
 
@@ -261,195 +261,28 @@ const index = () => {
                         Meet the hardworking and commited team behind the newsletter
                     </p>
                 </div>
-                {/* Cards */}
+                {/* Team */}
                 <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 max-w-screen-lg mt-16">
-                    {/* Card 1 */}
-                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
+                    {team.map((member, index) => (
+                        <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in" key={index}>
                         <div className="p-6 flex flex-col items-center">
-                            <img src="./img/team/team-KY.jpeg" alt="" className="rounded-full h-64" />
-                            <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Krish Yadav</h3>
-                            <p className="mb-2 text-bookmark-grey font-light">ALL THE TEAMS</p>
+                            <img src={member.photo_url} alt="" className="rounded-full h-64" />
+                            <h3 className="mt-5 mb-2 text-bookmark-white text-lg">{member.name}</h3>
+                            <p className="mb-2 text-bookmark-grey font-light">{member.teams.toUpperCase()}</p>
+                            <p className="mb-2 text-bookmark-grey font-light text-center">{member.post ? `Current Post - ${member.post}` : member.isActive !== null && member.isActive ? 'Status -  This Member is Currently Active' : 'Status - This member is Currently Inactive'}</p>
                         </div>
                         <hr className="border-bookmark-white" />
                         <div className="flex p-6">
-                            <a href="https://www.linkedin.com/in/krish-y-22356a203/" type="button" className="flex-1 btn btn-purple hover:bg-bookmark-white hover:text-black text-center">
-                                <i className="fab fa-linkedin-in  mx-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                    {/* Card 2 */}
-                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
-                        <div className="p-6 flex flex-col items-center mw-16 mh-16">
-                            <img src="./img/team/team-PS.png" alt="" className="rounded-full h-64" />
-                            <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Pragyan Srivastava</h3>
-                            <p className="mb-2 text-bookmark-grey font-light">TECHINCAL TEAM</p>
-                        </div>
-                        <hr className="border-bookmark-white" />
-                        <div className="flex p-6">
-                            <a href="mailto:prag12241@gmail.com" type="button" className="flex-1 btn btn-purple hover:bg-bookmark-white hover:text-black text-center mx-2">
-                                <i className="far fa-envelope"></i>
-                            </a>
-                            <a href="https://github.com/pragyan-srivastava" type="button" className="flex-1 btn btn-purple hover:bg-bookmark-white hover:text-black text-center mx-2">
-                                <i className="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
-                    {/* Card 3 */}
-                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
-                        <div className="p-6 flex flex-col items-center">
-                            <img src="./img/team/team-NR.jpg" alt="" className="rounded-full h-64" />
-                            <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Neha Reddy</h3>
-                            <p className="mb-2 text-bookmark-grey font-light">WRITING TEAM</p>
-                        </div>
-                    </div>
-                    {/* Card 4 */}
-                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
-                        <div className="p-6 flex flex-col items-center">
-                            <img src="./img/team/team-ABG.jpg" alt="" className="rounded-full h-64" />
-                            <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Alvin Ben George</h3>
-                            <p className="mb-2 text-bookmark-grey font-light">DESIGNING TEAM</p>
-                        </div>
-                    </div>
-                    {/* Card 5 */}
-                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
-                        <div className="p-6 flex flex-col items-center">
-                            <img src="./img/team/team-na.jpeg" alt="" className="rounded-full h-64" />
-                            <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Neev Agrawal</h3>
-                            <p className="mb-2 text-bookmark-grey font-light">DESIGN + WRITING TEAM</p>
-                        </div>
+                            {member.socials.map((social, index) => (
+                                <a href={social.url} type="button" className="flex-1 btn btn-purple hover:bg-bookmark-white hover:text-black text-center mx-2" target="_blank" rel="noreferrer">
+                                <i className={`${social.icon}  mx-2`}></i>
+                                </a>
+                            ))}
 
-                    </div>
-                    {/* Card 6 */}
-                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
-                        <div className="p-6 flex flex-col items-center">
-                            <img src="https://media.discordapp.net/attachments/870055656865021953/875222882601554000/SPOILER_unknown.png" alt="" className="rounded-full h-64" />
-                            <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Surya Vardhan</h3>
-                            <p className="mb-2 text-bookmark-grey font-light">WRITING TEAM</p>
-                        </div>
-                        <hr className=" border-bookmark-white" />
-                        <div className="flex p-6">
-                            <a href="https://twitter.com/SuryaV67065498" type="button" className="flex-1 btn btn-purple hover:bg-bookmark-white hover:text-black text-center">
-                                <i className="fab fa-twitter"></i>
-                            </a>
+                            
                         </div>
                     </div>
-                    {/* Card 7 */}
-                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
-                        <div className="p-6 flex flex-col items-center">
-                            <img src="./img/team/team-BB.jpeg" alt="" className="rounded-full h-64" />
-                            <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Bhuvi Bist</h3>
-                            <p className="mb-2 text-bookmark-grey font-light">WRITING TEAM</p>
-                        </div>
-
-                    </div>
-                    {/* Card 8 */}
-                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
-                        <div className="p-6 flex flex-col items-center">
-                            <img src="./img/team/team-ra.jpg" alt="" className="rounded-full h-64" />
-                            <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Riya Agrawal</h3>
-                            <p className="mb-2 text-bookmark-grey font-light">WRITING + TECHNICAL TEAM</p>
-                        </div>
-
-                    </div>
-                    {/* Card 9 */}
-                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
-                        <div className="p-6 flex flex-col items-center">
-                            <img src="/img/team/Team-YY.jpg" alt="" className="rounded-full h-64" />
-                            <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Yash Yadav</h3>
-                            <p className="mb-2 text-bookmark-grey font-light">WRITING TEAM</p>
-                        </div>
-
-                    </div>
-                    {/* Card 10 */}
-                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
-                        <div className="p-6 flex flex-col items-center">
-                            <img src="./img/team/team-KJ.jpg" alt="" className="rounded-full h-64" />
-                            <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Kavyansh Jain</h3>
-                            <p className="mb-2 text-bookmark-grey font-light">WRITING TEAM</p>
-                        </div>
-                        <div className="flex p-6">
-
-                        </div>
-                    </div>
-                    {/* Card 11 */}
-                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
-                        <div className="p-6 flex flex-col items-center">
-                            <img src="./img/team/team-AT.jpeg" alt="" className="rounded-full h-64" />
-                            <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Ansh Tulsyan</h3>
-                            <p className="mb-2 text-bookmark-grey font-light">PROMOTIONS TEAM</p>
-                        </div>
-                        <hr className=" border-bookmark-white" />
-                        <div className="flex p-6">
-                            <a href="https://www.linkedin.com/in/ansh-tulsyan-1a44b61b7/" type="button" className="flex-1 btn btn-purple hover:bg-bookmark-white hover:text-black text-center">
-                                <i className="fab fa-linkedin-in  mx-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                    {/* Card 12 */}
-                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
-                        <div className="p-6 flex flex-col items-center">
-                            <img src="./img/team/hacker.png" alt="" className="rounded-full h-64" />
-                            <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Suraj Kumar</h3>
-                            <p className="mb-2 text-bookmark-grey font-light">WRITING TEAM</p>
-                        </div>
-                    </div>
-                    {/* Card 13 */}
-                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
-                        <div className="p-6 flex flex-col items-center">
-                            <img src="./img/team/team-RR.jpg" alt="" className="rounded-full h-64" />
-                            <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Raihan Riyaz</h3>
-                            <p className="mb-2 text-bookmark-grey font-light">WRITING TEAM</p>
-                        </div>
-                    </div>
-                    {/* Card 14 */}
-                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
-                        <div className="p-6 flex flex-col items-center">
-                            <img src="./img/team/team-KN.png" alt="" className="rounded-full h-64" />
-                            <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Krishna Nagpal</h3>
-                            <p className="mb-2 text-bookmark-grey font-light">WRITING TEAM</p>
-                        </div>
-                    </div>
-                    {/* Card 15 */}
-                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
-                        <div className="p-6 flex flex-col items-center">
-                            <img src="./img/team/team-YVK.jpg" alt="" className="rounded-full h-64" />
-                            <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Yash Vardhan Kapil</h3>
-                            <p className="mb-2 text-bookmark-grey font-light">WRITING TEAM</p>
-                        </div>
-                        <hr className=" border-bookmark-white" />
-                        <div className="flex p-6">
-                            <a href="https://twitter.com/YashVar20" type="button" className="flex-1 btn btn-purple hover:bg-bookmark-white hover:text-black text-center mx-2">
-                                <i className="fab fa-twitter  mx-2"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/yash-vardhan-kapil-323101215/" type="button" className="flex-1 btn btn-purple hover:bg-bookmark-white hover:text-black text-center mx-2">
-                                <i className="fab fa-linkedin-in  mx-2"></i>
-                            </a>
-                        </div>
-                    </div>
-                    {/* Card 16 */}
-                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
-                        <div className="p-6 flex flex-col items-center">
-                            <img src="./img/team/team-DG.jpg" alt="" className="rounded-full h-64" />
-                            <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Diptesh Gupta</h3>
-                            <p className="mb-2 text-bookmark-grey font-light">WRITING TEAM</p>
-                        </div>
-                    </div>
-                    <div className="flex flex-col rounded-md shadow-2xl shadow-black lg:mb-16" data-aos="zoom-in">
-                        <div className="p-6 flex flex-col items-center mw-16 mh-16">
-                            <img src="./img/team/AS.jpg" alt="" className="rounded-full h-64" />
-                            <h3 className="mt-5 mb-2 text-bookmark-white text-lg">Ansh Sharma</h3>
-                            <p className="mb-2 text-bookmark-grey font-light">TECHINCAL TEAM</p>
-                        </div>
-                        <hr className=" border-bookmark-white" />
-                        <div className="flex p-6">
-                            <a href="https://anshsharmagamesandtech.web.app" type="button" className="flex-1 btn btn-purple hover:bg-bookmark-white hover:text-black text-center mx-2">
-                                <i className="fas fa-globe"></i>
-                            </a>
-                            <a href="https://github.com/Ansh-code398/" type="button" className="flex-1 btn btn-purple hover:bg-bookmark-white hover:text-black text-center mx-2">
-                                <i className="fab fa-github"></i>
-                            </a>
-                        </div>
-                    </div>
+                    ))}   
                 </div>
             </section>
             {/* FAQ */}
@@ -488,3 +321,13 @@ const index = () => {
 }
 
 export default index
+
+export async function getServerSideProps() {
+    const res = await axios.get('https://csvoyager-api.vercel.app/api/team')
+    const data = await res.data
+    return {
+        props: {
+            team: data
+        }
+    }
+}

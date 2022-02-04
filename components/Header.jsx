@@ -9,7 +9,7 @@ const Header = () => {
         <div className="py-1 w-8 h-8"><img src="/img/logo.png" alt="" /></div>
         <ul className="flex flex-1 justify-end items-center gap-12 text-bookmark-white uppercase text-xs flex-wrap">
           <Link className="cursor-pointer" href='/'>Home</Link>
-          <Link className="cursor-pointer" href='/blog'>Blog</Link>
+          <Link className="cursor-pointer" href='/editions'>Editions</Link>
           <Link className="cursor-pointer" href='/#subscribe'>Subscribe</Link>
         </ul>
       </nav>
