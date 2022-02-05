@@ -42,7 +42,7 @@ const PostDetail = ({ post }) => {
           <h1 className="text-2xl text-center text-white my-16 break-all">{post.desc}</h1>
           {pages && pages.length > 0 && <div className="w-full text-center sm:overflow-hidden overflow-auto">
             <h1 className="text-xl font-semibold mb-4 text-white">FlipBook</h1>
-            <HTMLFlipBook width={400} height={1414.2 / 2.5} ref={book} className='w-full mx-auto'>
+            <HTMLFlipBook width={800} height={1414.2 * 2 / 2.5} ref={book} className='w-full mx-auto'>
               {pages.map((page, index) => {
                 return (
                   <div key={index}>
