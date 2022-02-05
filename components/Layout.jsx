@@ -16,7 +16,7 @@ const Layout = ({ children }) => (
       <div className="gpt3__footer-links">
         <div className="gpt3__footer-links_logo">
           <img src="/img/logo.png" alt="gpt3_logo" />
-          <b className='text-center'>CSVoyager <br /> All Rights Reserved</b>
+          <b className='text-center'>CS Voyager <br /> All Rights Reserved</b>
         </div>
         <div className="gpt3__footer-links_div">
           <h4>Navigation</h4>
@@ -33,7 +33,7 @@ const Layout = ({ children }) => (
       </div>
 
       <div className="gpt3__footer-copyright">
-        <p>Copyright &copy; 2022 <b>CSVoyager</b>. All rights reserved.</p>
+        <p>Copyright &copy; 2022 <b>CS Voyager</b>. All rights reserved.</p>
       </div>
     </div>
     <Script src="https://kit.fontawesome.com/8f366c7ba6.js" crossOrigin="anonymous"></Script>

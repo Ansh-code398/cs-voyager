@@ -3,7 +3,7 @@ import React from 'react';
 const Header = ({emailErr, emailSuccess, SubscribeEmail, onSubscribeClick}) => (
   <div className="gpt3__header section__padding" id="home">
     <div className="gpt3__header-content">
-      <h1 className="gradient__text">CSVoyager</h1>
+      <h1 className="gradient__text">CS Voyager</h1>
         <p>A MONTHLY NEWSLETTER AIMING TO MAKE EVERYONE AWARE ABOUT REVOLUTIONIZING CS TECHNOLOGIES</p>
       <div className="gpt3__header-content__input">
         <input type="email" placeholder="Your Email Address" ref={SubscribeEmail} />
