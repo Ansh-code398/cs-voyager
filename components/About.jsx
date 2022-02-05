@@ -4,7 +4,16 @@ import Feature from './Feature';
 const About = () => (
   <div className="gpt3__whatgpt3 section__margin" id="wgpt3">
     <div className="gpt3__whatgpt3-feature" data-aos="fade-left">
-      <Feature title="What is CSVoyager" text='"CS Voyager" is a monthly newsletter which will keep you updated with the latest happenings around the globe in the field of Computer Science & will provide focused knowledge specifically designed for CS enthusiasts. Just like a person who goes on voyages, our newsletter is on its voyage & shall explore a different part of CS and this evolving Technology era & present them in front of the reader."'/>
+      <div className="gpt3__features-container__feature" data-aos="fade-up">
+        <div className="gpt3__features-container__feature-title">
+          <img src='/img/about.jpg' alt="About" style={{maxWidth: '500px'}}/>
+        </div>
+        <div className="gpt3__features-container_feature-answer">
+          <div />
+          <h1 style={{fontSize: '2rem', lineHeight: '2.5rem'}}>What is CS Voyager?</h1>
+          <p style={{fontSize: '1rem'}}>"CS Voyager" is a monthly newsletter which will keep you updated with the latest happenings around the globe in the field of Computer Science & will provide focused knowledge specifically designed for CS enthusiasts. Just like a person who goes on voyages, our newsletter is on its voyage & shall explore a different part of CS and this evolving Technology era & present them in front of the reader."</p>
+        </div>
+      </div>
     </div>
     <div className="gpt3__whatgpt3-heading" data-aos="zoom-in">
       <h1 className="gradient__text">Our aim is to bring awareness and motivation among the individuals to explore the field of Computer Science</h1>
