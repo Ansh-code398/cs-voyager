@@ -1,36 +1,41 @@
 import Head from 'next/head';
 import Script from 'next/script';
 import React from 'react';
-import Header from './Header';
+import Navbar from './Navbar';
 import Link from 'next/link';
 
 const Layout = ({ children }) => (
   <>
-  <Head>
-    <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon"/>
-  </Head>
-    <Header />
+    <Head>
+      <link rel="shortcut icon" href="/img/logo.png" type="image/x-icon" />
+    </Head>
+    <Navbar />
     {children}
     {/* Footer */}
-    <footer className="bg-bookmark-blue py-8">
-                <div className="container flex flex-col md:flex-row items-center">
-                    <div className="flex flex-1 flex-wrap items-center justify-center md:justify-start gap-12">
-                        <img src="/img/logo.png" className="w-8 h-8" alt="" />
-                        <ul className="flex text-white uppercase gap-12 text-xs kex-wrap">
-                            <Link className="cursor-pointer" href='/'>Home</Link>
-                            <Link className="cursor-pointer" href='/blog'>Blog</Link>
-                            <Link className="cursor-pointer" href='/#subscribe'>Subscribe</Link>
-                        </ul>
-                    </div>
-                    <div className="flex gap-10 mt-12 md:mt-0">
-                        
-                        <p className="cursor-pointer text-white text-2xl">
-                            Copyright &copy; 2021 CS Voyager
-                        </p>
-                        
-                    </div>
-                </div>
-            </footer>
+    <div className="gpt3__footer section__padding">
+      <div className="gpt3__footer-links">
+        <div className="gpt3__footer-links_logo">
+          <img src="/img/logo.png" alt="gpt3_logo" />
+          <b className='text-center'>CSVoyager <br /> All Rights Reserved</b>
+        </div>
+        <div className="gpt3__footer-links_div">
+          <h4>Navigation</h4>
+          <Link href="/">Home</Link>
+          <Link href="/editions">Editions</Link>
+          <Link href="/#subscribe">Subscribe</Link>
+        </div>
+        <div className="gpt3__footer-links_div">
+          <h4>Contact</h4>
+          <a href="https://discord.gg/AkR6U7eF6S" target="_blank" rel='noopener'>Discord</a>
+          <a href="https://discord.gg/AkR6U7eF6S" target="_blank" rel='noopener'>Mail</a>
+          <a href="/#team">Team</a>
+        </div>
+      </div>
+
+      <div className="gpt3__footer-copyright">
+        <p>Copyright &copy; 2022 <b>CSVoyager</b>. All rights reserved.</p>
+      </div>
+    </div>
     <Script src="https://kit.fontawesome.com/8f366c7ba6.js" crossOrigin="anonymous"></Script>
   </>
 );

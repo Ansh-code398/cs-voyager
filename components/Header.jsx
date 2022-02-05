@@ -1,20 +1,22 @@
-import React from 'react'
-import Link from 'next/link'
+import React from 'react';
 
-const Header = () => {
-  
-    return (
-      <header className='sticky bg-black top-0 z-50'>
-      <nav className="container flex items-center py-4 ">
-        <div className="py-1 w-8 h-8"><img src="/img/logo.png" alt="" /></div>
-        <ul className="flex flex-1 justify-end items-center gap-12 text-bookmark-white uppercase text-xs flex-wrap">
-          <Link className="cursor-pointer" href='/'>Home</Link>
-          <Link className="cursor-pointer" href='/editions'>Editions</Link>
-          <Link className="cursor-pointer" href='/#subscribe'>Subscribe</Link>
-        </ul>
-      </nav>
-    </header>
-  );
-};
+const Header = ({emailErr, emailSuccess, SubscribeEmail, onSubscribeClick}) => (
+  <div className="gpt3__header section__padding" id="home">
+    <div className="gpt3__header-content">
+      <h1 className="gradient__text">CSVoyager</h1>
+        <p>A MONTHLY NEWSLETTER AIMING TO MAKE EVERYONE AWARE ABOUT REVOLUTIONIZING CS TECHNOLOGIES</p>
+      <div className="gpt3__header-content__input">
+        <input type="email" placeholder="Your Email Address" ref={SubscribeEmail} />
+        <button type="button" onClick={onSubscribeClick}>Subscribe</button>
+        <br/>
+      </div>
+        <span>{emailErr ? emailErr : emailSuccess ? emailSuccess : <br/>}</span>
+    </div>
 
-export default Header
+    <div className="gpt3__header-image">
+      <img src="/img/logo.png" />
+    </div>
+  </div>
+);
+
+export default Header;
