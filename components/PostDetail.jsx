@@ -2,6 +2,29 @@ import React, { useEffect, useRef, useState } from 'react';
 import HTMLFlipBook from 'react-pageflip';
 import moment from 'moment';
 
+const PageCover = React.forwardRef((props, ref) => {
+  return (
+    <div className="page page-cover flex items-center justify-center m-auto bg-[#131313]" ref={ref} data-density="hard">
+      <div className="page-content">
+        <h2>{props.children}</h2>
+      </div>
+    </div>
+  );
+});
+
+const Page = React.forwardRef((props, ref) => {
+  return (
+    <div className="page flex items-center justify-center m-auto bg-[#131313]" ref={ref}>
+      <div className="page-content">
+        <div className="page-image"></div>
+        <div className="page-text">{props.children}</div>
+        <div className="page-footer">{props.number}</div>
+      </div>
+    </div>
+  );
+});
+
+
 const PostDetail = ({ post }) => {
 
   const [pages, setPages] = useState([])
@@ -13,7 +36,7 @@ const PostDetail = ({ post }) => {
   const pageToGo = useRef();
   return (
     <>
-      <div className="bg-[#131313] shadow-2xl shadow-black rounded-lg lg:p-8 pb-12 mb-8">
+      <div className="bg-[#131313] shadow-2xl shadow-black rounded-lg lg:p-8 pb-12 mb-8 overflow-hidden">
         <div className="relative overflow-hidden shadow-md mb-6">
           <img src={post.featuredImage.url} alt="" className="object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
         </div>
@@ -40,21 +63,32 @@ const PostDetail = ({ post }) => {
           <h1 className="mb-8 text-3xl text-white font-semibold text-center">{post.title}</h1>
           <p className="text-gray-200 text-center my-4">{post.exerpt}</p>
           <h1 className="text-2xl text-center text-white my-16 break-all">{post.desc}</h1>
-          {pages && pages.length > 0 && <div className="w-full text-center sm:overflow-hidden overflow-auto">
+          {pages && pages.length > 0 && <div className="w-full text-center sm:overflow-hidden">
             <h1 className="text-xl font-semibold mb-4 text-white">FlipBook</h1>
-            <HTMLFlipBook width={800} height={1414.2 * 2 / 2.5} ref={book} className='w-full mx-auto'>
+            <HTMLFlipBook 
+              width={550}
+              height={707.1}
+              size="stretch"
+              minWidth={200}
+              maxWidth={1000}
+              minHeight={282.84}
+              maxHeight={1414.2}
+              maxShadowOpacity={0.5}
+              showCover={true}
+              mobileScrollSupport={true}
+            ref={book} className='w-full mx-auto'>
               {pages.map((page, index) => {
                 return (
                   <div key={index}>
-                    <div className="flex items-center justify-center w-full h-full bg-[#131313]"><img src={page}></img></div>
+                    {index === 0 ? <PageCover><img src={page}></img></PageCover> : <Page number={index}><img src={page}></img></Page>}
                   </div>
                 )
               })}
             </HTMLFlipBook>
             <button onClick={() =>
-              book.current.pageFlip().flipPrev()} className='transition duration-500 ease transform hover:-translate-y-1 inline-block bg-teal-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer'>Previous page</button>
+              book.current.pageFlip().flipPrev()} className='transition duration-500 ease transform hover:-translate-y-1 inline-block bg-teal-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer mt-20'>Previous page</button>
             <button onClick={() =>
-              book.current.pageFlip().flipNext()} className='transition duration-500 ease transform hover:-translate-y-1 inline-block bg-teal-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer mt-2'>Next page</button>
+              book.current.pageFlip().flipNext()} className='transition duration-500 ease transform hover:-translate-y-1 inline-block bg-teal-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer mt-20'>Next page</button>
           </div>}
         </div>
       </div>
