@@ -4,7 +4,7 @@ import moment from 'moment';
 
 const PageCover = React.forwardRef((props, ref) => {
   return (
-    <div className="page page-cover flex items-center justify-center m-auto bg-[#131313]" ref={ref} data-density="hard">
+    <div className="page page-cover flex items-center justify-center m-auto bg-[#000]" ref={ref} data-density="hard">
       <div className="page-content">
         <h2>{props.children}</h2>
       </div>
@@ -14,7 +14,7 @@ const PageCover = React.forwardRef((props, ref) => {
 
 const Page = React.forwardRef((props, ref) => {
   return (
-    <div className="page flex items-center justify-center m-auto bg-[#131313]" ref={ref}>
+    <div className="page flex items-center justify-center m-auto bg-[#000]" ref={ref}>
       <div className="page-content">
         <div className="page-image"></div>
         <div className="page-text">{props.children}</div>
@@ -36,7 +36,7 @@ const PostDetail = ({ post }) => {
   const pageToGo = useRef();
   return (
     <>
-      <div className="bg-[#131313] shadow-2xl shadow-black rounded-lg lg:p-8 pb-12 mb-8 overflow-hidden">
+      <div className="bg-black shadow-2xl shadow-black rounded-lg lg:p-8 pb-12 mb-8 overflow-hidden">
         <div className="relative overflow-hidden shadow-md mb-6">
           <img src={post.featuredImage.url} alt="" className="object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
         </div>
@@ -66,7 +66,7 @@ const PostDetail = ({ post }) => {
           {pages && pages.length > 0 && <div className="w-full text-center sm:overflow-hidden">
             <h1 className="text-xl font-semibold mb-4 text-white">FlipBook</h1>
             <HTMLFlipBook 
-              width={550}
+              width={500}
               height={707.1}
               size="stretch"
               minWidth={200}

@@ -1,13 +1,20 @@
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
-
+import { useRouter } from 'next/router';
 
 const Navbar = () => {
+  const router = useRouter();
   const [toggleMenu, setToggleMenu] = useState(false);
+  const [isPostPage, setIsPostPage] = useState(false);
+
+  useEffect(() => {
+    router.pathname.includes('post') ? setIsPostPage(true) : setIsPostPage(false);
+  }, [router]);
+  
 
   return (
-    <div className="gpt3__navbar">
+    <div className={`gpt3__navbar ${!isPostPage && 'sticky top-0'}`}>
       <div className="gpt3__navbar-links">
         <div className="gpt3__navbar-links_logo">
           <img src="/img/logo.png" />

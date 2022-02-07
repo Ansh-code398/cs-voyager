@@ -34,7 +34,7 @@ const PostDetails = ( props ) => {
         <meta name="og:title" content={post.title} />
         <meta name="og:url" content={`https://csvoyager.vercel.app/post/${post.slug}`} />
       </Head>
-      <div className="container bg-[#131313] mx-auto px-10 mb-8">
+      <div className="container bg-black mx-auto px-10 mb-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="col-span-1 lg:col-span-12">
             {PostDetails ? <PostDetail post={PostDetails}/> :  <PostDetail post={props.post} />}
