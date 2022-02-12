@@ -41,8 +41,8 @@ const index = ({ team }) => {
             </section>
             <About />
             {/* Team */}
+{/*
             <section className="py-20 bg-black" id="team">
-                {/* Heading */}
                 <div className="sm:w-3/4 lg:w-5/12 mx-auto px-2">
                     <h1 className="text-3xl text-center text-bookmark-white">Our Team</h1>
                     <p className="text-center text-bookmark-grey mt-4">
@@ -50,7 +50,7 @@ const index = ({ team }) => {
                     </p>
                 </div>
                 <Team teamData={team} />
-            </section>
+            </section>*/}
             {/* FAQ */}
             <section className="bg-black text-white py-20">
                 <div className="container">
