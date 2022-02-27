@@ -8,8 +8,9 @@ import Header from "../components/Header";
 import About from "../components/About";
 import Team from "../components/Team";
 import { getPosts } from "../services";
+import { EditionAlert } from "../components";
 
-const index = ({ team, thumbnails }) => {
+const index = ({ team, thumbnails, latestPost }) => {
     const [emailErr, setEmailErr] = useState(null)
     const [emailSuccess, setEmailSuccess] = useState(null)
 
@@ -80,7 +81,7 @@ const index = ({ team, thumbnails }) => {
                     </div>
                 </div>
             </section>
-
+            <EditionAlert latestPost={latestPost} />
 
 
         </div>
@@ -92,10 +93,13 @@ export default index
 export async function getServerSideProps() {
     const res = await axios.get('https://csvoyager-api.vercel.app/api/team')
     const thumbnails = await (await (getPosts())).data.map(post => post.featuredImage.url)
+    const posts = await (await (getPosts())).data
+    const latestPost = posts.slice(-1)[0]
     const data = await res.data
     return {
         props: {
             team: data,
+            latestPost: latestPost,
             thumbnails: thumbnails
         }
     }

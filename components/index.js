@@ -6,3 +6,4 @@ export { default as AdjacentPostCard } from './AdjacentPostCard.jsx';
 export { default as FeaturedPostCard } from './FeaturedPostCard.jsx';
 export { default as Loader } from './Loader.jsx';
 export { default as HomeCarousel } from './HomeCarousel.jsx';
+export { default as EditionAlert } from './EditionAlert.jsx';
