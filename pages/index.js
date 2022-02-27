@@ -7,8 +7,9 @@ import axios from "axios";
 import Header from "../components/Header";
 import About from "../components/About";
 import Team from "../components/Team";
+import { getPosts } from "../services";
 
-const index = ({ team }) => {
+const index = ({ team, thumbnails }) => {
     const [emailErr, setEmailErr] = useState(null)
     const [emailSuccess, setEmailSuccess] = useState(null)
 
@@ -37,7 +38,7 @@ const index = ({ team }) => {
             </Head>
 
             <section className="relative overflow-hidden" data-aos="fade-right" id="subscribe">
-                <Header emailErr={emailErr} emailSuccess={emailSuccess} SubscribeEmail={SubscribeEmail} onSubscribeClick={onSubscribeClick}/>
+                <Header emailErr={emailErr} emailSuccess={emailSuccess} SubscribeEmail={SubscribeEmail} onSubscribeClick={onSubscribeClick} thumbnails={thumbnails}/>
             </section>
             <About />
             {/* Team */}
@@ -90,10 +91,12 @@ export default index
 
 export async function getServerSideProps() {
     const res = await axios.get('https://csvoyager-api.vercel.app/api/team')
+    const thumbnails = await (await (getPosts())).data.map(post => post.featuredImage.url)
     const data = await res.data
     return {
         props: {
-            team: data
+            team: data,
+            thumbnails: thumbnails
         }
     }
 }

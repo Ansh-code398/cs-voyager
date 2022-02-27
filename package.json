@@ -7,10 +7,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "@emotion/react": "^11.8.1",
+    "@emotion/styled": "^11.8.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.16",
+    "@mui/material": "^5.4.3",
     "aos": "^2.3.4",
     "axios": "^0.24.0",
     "font-awesome": "^4.7.0",
@@ -25,6 +28,7 @@
     "react-pageflip": "^2.0.3",
     "react-pdf-flipbook": "^0.1.6",
     "react-pdf-to-image": "^1.0.2",
+    "react-swipeable-views": "^0.14.0",
     "sass": "^1.45.0",
     "validator": "^13.7.0",
     "worker-loader": "^3.0.8"
