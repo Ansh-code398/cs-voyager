@@ -88,7 +88,7 @@ const Index = ({ team, thumbnails, latestPost }) => {
     );
 }
 
-export default index
+export default Index
 
 export async function getServerSideProps() {
     const res = await axios.get('https://csvoyager-api.vercel.app/api/team')
