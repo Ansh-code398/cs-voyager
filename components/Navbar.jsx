@@ -29,13 +29,13 @@ const Navbar = ({isAnimating}) => {
         </div>
         <div className="flex-1"></div>
         <div className="gpt3__navbar-links_container">
-          <Button variant='contained' color='secondary'>
+          <Button className='bg-transparent hover:bg-[#7b1fa2]' color='inherit'>
             <p><Link href="/">Home</Link></p>
           </Button>
-          <Button variant='contained' color='secondary'>
+          <Button className='bg-transparent hover:bg-[#7b1fa2]' color='inherit'>
             <p><Link href="/editions">Editions</Link></p>
           </Button>
-          <Button variant='contained' color='secondary'>
+          <Button className='bg-transparent hover:bg-[#7b1fa2]' color='inherit'>
             <p><Link href="/#subscribe">Subscribe</Link></p>
           </Button>
         </div>
