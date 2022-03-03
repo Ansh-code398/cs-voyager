@@ -110,8 +110,15 @@
 }
 
 .MuiBox-root .css-8wtyfv{
-    width: 90%;
+    width: 50%;
     height: fit-content;
+}
+
+@media screen and (max-width: 1300px) {
+    .MuiBox-root .css-8wtyfv{
+        width: 80%;
+        height: fit-content;
+    }
 }
 
 @media screen and (max-width: 1050px) {
