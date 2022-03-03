@@ -33,6 +33,7 @@ const PostDetails = ( props ) => {
         <meta name="og:image" content={post.featuredImage.url} />
         <meta name="og:title" content={post.title} />
         <meta name="og:url" content={`https://csvoyager.vercel.app/post/${post.slug}`} />
+        <meta name='keywords' content={`newsletter, csvoyager, csv, computer science newsletter, ${post.title}, ${post.slug}, ${post.title} CsVoyager`} />
       </Head>
       <div className="container bg-black mx-auto px-10 mb-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">

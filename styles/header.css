@@ -109,11 +109,9 @@
     align-items: center;
 }
 
-.gpt3__header-image img {
-    width: 100%;
-    max-width: 500px;
-    max-height: auto;
-    height: 100%;
+.MuiBox-root .css-8wtyfv{
+    width: 90%;
+    height: fit-content;
 }
 
 @media screen and (max-width: 1050px) {

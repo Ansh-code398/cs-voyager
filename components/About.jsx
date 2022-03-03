@@ -7,12 +7,12 @@ const About = () => (
     <div className="gpt3__whatgpt3-feature" data-aos="fade-left">
       <div className="gpt3__features-container__feature" data-aos="fade-up">
         <div className="gpt3__features-container__feature-title">
-          <img src='https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_960_720.jpg' alt="About" style={{maxWidth: '500px'}}/>
+          <img src='/img/About.webp' alt="About" style={{maxWidth: '500px'}}/>
         </div>
         <div className="gpt3__features-container_feature-answer">
-          <div />
-          <h1 style={{fontSize: '2rem', lineHeight: '2.5rem'}}>What is CS Voyager?</h1>
-          <p style={{fontSize: '1.5rem', lineHeight: '1.7rem'}}>"CS Voyager" is a monthly newsletter which will keep you updated with the latest happenings around the globe in the field of Computer Science & will provide focused knowledge specifically designed for CS enthusiasts. Just like a person who goes on voyages, our newsletter is on its voyage & shall explore a different part of CS and this evolving Technology era & present them in front of the reader."</p>
+          <div className='mx-5'/>
+          <h1 style={{fontSize: '2rem', lineHeight: '2.5rem'}} className="mx-5 text-justify">What is CS Voyager?</h1>
+          <p style={{fontSize: '1.5rem', lineHeight: '1.7rem'}} className="mx-5">"CS Voyager" is a monthly newsletter which will keep you updated with the latest happenings around the globe in the field of Computer Science & will provide focused knowledge specifically designed for CS enthusiasts. Just like a person who goes on voyages, our newsletter is on its voyage & shall explore a different part of CS and this evolving Technology era & present them in front of the reader."</p>
         </div>
       </div>
     </div>

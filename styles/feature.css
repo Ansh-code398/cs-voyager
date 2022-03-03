@@ -10,8 +10,9 @@
 
 .gpt3__features-container__feature-title {
     flex: 1;
-    max-width: 180px;
-    margin-right: 2rem;
+    /* max-width: 180px; */
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .gpt3__features-container__feature-title h1 {
@@ -63,7 +64,9 @@
 
 @media screen and (max-width: 1450px){
     .gpt3__features-container__feature-title img{
-        display: none;
+        width: 100%;
+        height: auto;
+        
     }
     .gpt3__features-container_feature-answer{
         width: full;
