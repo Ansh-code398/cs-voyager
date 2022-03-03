@@ -13,17 +13,6 @@ const PostPage = ( props ) => {
   if (router.isFallback) {
     return <Loader />;
   }
-  
-  const [PostDetails, setPostDetails] = useState(null);
-  useEffect(() => {
-    
-    const data = async () => {
-     const d = await axios.get(`https://csvoyager-api.vercel.app/api/posts/${props.slug}`)
-     setPostDetails(d.data);
-    }
-    data()
-    
-  }, [router]);
 
   return (
     <>
@@ -39,7 +28,7 @@ const PostPage = ( props ) => {
       <div className="container bg-black mx-auto px-10 mb-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="col-span-1 lg:col-span-12">
-            {PostDetails ? <PostDetail post={PostDetails}/> :  <PostDetail post={props.post} />}
+            <PostDetail post={props.post} />
           </div>
         </div>
       </div>
