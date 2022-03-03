@@ -21,7 +21,7 @@ const Team = ({ teamData }) => (
             <ul className="sci">
               {member.socials.map((social, i) => (
                 <li style={{ '--i': i+1 }} key={i}>
-                  <a href={social.url} target="_blank" rel='noopener'><i className={social.icon} aria-hidden="true"></i></a>
+                  <a href={social.url} target="_blank" rel="noreferrer"><i className={social.icon} aria-hidden="true"></i></a>
                 </li>
               ))}
             </ul>

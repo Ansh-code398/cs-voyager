@@ -1,8 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, forwardRef } from 'react';
 import HTMLFlipBook from 'react-pageflip';
 import moment from 'moment';
 
-const PageCover = React.forwardRef((props, ref) => {
+const PageCover = forwardRef((props, ref) => {
   return (
     <div className="page page-cover flex items-center justify-center m-auto bg-[#000]" ref={ref} data-density="hard">
       <div className="page-content">
@@ -12,7 +12,7 @@ const PageCover = React.forwardRef((props, ref) => {
   );
 });
 
-const Page = React.forwardRef((props, ref) => {
+const Page = forwardRef((props, ref) => {
   return (
     <div className="page flex items-center justify-center m-auto bg-[#000]" ref={ref}>
       <div className="page-content">

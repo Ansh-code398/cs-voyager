@@ -10,7 +10,7 @@ import Team from "../components/Team";
 import { getPosts } from "../services";
 import { EditionAlert } from "../components";
 
-const index = ({ team, thumbnails, latestPost }) => {
+const Index = ({ team, thumbnails, latestPost }) => {
     const [emailErr, setEmailErr] = useState(null)
     const [emailSuccess, setEmailSuccess] = useState(null)
 

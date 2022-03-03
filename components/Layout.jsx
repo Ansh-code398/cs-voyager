@@ -57,9 +57,9 @@ const Layout = ({ children }) => {
         </div>
         <div className="gpt3__footer-links_div">
           <h4>Contact</h4>
-          <a href="https://discord.gg/AkR6U7eF6S" target="_blank" rel='noopener'>Discord</a>
-          <a href="https://discord.gg/AkR6U7eF6S" target="_blank" rel='noopener'>Mail</a>
-          <a href="/#team">Team</a>
+          <a href="https://discord.gg/AkR6U7eF6S" target="_blank" rel="noreferrer">Discord</a>
+          <a href="mailto:computersciencevoyager@gmail.com" target="_blank" rel="noreferrer">Mail</a>
+          <Link href="/#team">Team</Link>
         </div>
       </div>
 

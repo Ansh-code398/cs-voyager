@@ -6,7 +6,7 @@ import Head from 'next/head';
 import axios from 'axios';
 
 
-const PostDetails = ( props ) => {
+const PostPage = ( props ) => {
   const { post } = props;
   const router = useRouter();
 
@@ -15,6 +15,7 @@ const PostDetails = ( props ) => {
   }
   
   const [PostDetails, setPostDetails] = useState(null);
+  const router = useRouter();
   useEffect(() => {
     
     const data = async () => {
@@ -23,7 +24,8 @@ const PostDetails = ( props ) => {
     }
     data()
     
-  }, []);
+  }, [router]);
+
   return (
     <>
       <Head>
