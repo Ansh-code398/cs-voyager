@@ -1,9 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import { useRouter } from 'next/router';
 import { PostDetail, Loader } from '../../components/index.js';
 import { getPosts, getPostDetails } from '../../services/index.js';
 import Head from 'next/head';
-import axios from 'axios';
 
 
 const PostPage = ( props ) => {
@@ -28,7 +27,7 @@ const PostPage = ( props ) => {
       <div className="container bg-black mx-auto px-10 mb-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="col-span-1 lg:col-span-12">
-            <PostDetail post={props.post} />
+             <PostDetail post={post} />
           </div>
         </div>
       </div>
