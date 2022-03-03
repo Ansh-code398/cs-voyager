@@ -15,7 +15,6 @@ const PostPage = ( props ) => {
   }
   
   const [PostDetails, setPostDetails] = useState(null);
-  const router = useRouter();
   useEffect(() => {
     
     const data = async () => {
