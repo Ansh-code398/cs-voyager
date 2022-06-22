@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
+import Image from 'next/image';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
@@ -34,26 +35,27 @@ function SwipeableTextMobileStepper({ thumbnails }) {
             </Paper>
             <AutoPlaySwipeableViews
                 axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
-                index={activeStep}
+                index={1}
                 onChangeIndex={handleStepChange}
                 enableMouseEvents
                 
             >
-                {typeof(Window) !== undefined  && thumbnails.map((step, index) => (
-                    <div key={step}>
+                {thumbnails.map((step, index) => (
+                    <div key={step} className="coursel">
                         {Math.abs(activeStep - index) <= 1  ? (
-                            <Box
-                                component="img"
-                                sx={{
-                                    height: 255,
+                            <Image
+                                height= {255}
+                                width= "100%"
+                                style={{
                                     display: 'flex',
                                     marginX: 'auto',
-                                    maxWidth: 400,
+                                    minWidth: "100%",
+                                    width: "100%",
+                                    height: "auto",
                                     overflow: 'hidden',
-                                    width: '100%',
                                     justifyContent: 'center',
                                     alignItems: 'center',
-
+                                    objectFit: "cover"
                                 }}
                                 src={step}
                                 alt={step}

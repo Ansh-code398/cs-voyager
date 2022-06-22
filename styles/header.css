@@ -121,6 +121,18 @@
     }
 }
 
+.coursel {
+    display: grid;
+    place-items: center;
+}
+
+.coursel span, .coursel span{
+    width: 100% !important;
+    height: 255px !important;
+    max-width: 180px !important;
+    margin: 0 auto !important;
+}
+
 @media screen and (max-width: 1050px) {
     .gpt3__header {
         flex-direction: column;
