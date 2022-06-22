@@ -39,9 +39,9 @@ function SwipeableTextMobileStepper({ thumbnails }) {
                 enableMouseEvents
                 
             >
-                {thumbnails.map((step, index) => (
+                {typeof(Window) !== undefined  && thumbnails.map((step, index) => (
                     <div key={step}>
-                        {Math.abs(activeStep - index) <= 2 ? (
+                        {Math.abs(activeStep - index) <= 1  ? (
                             <Box
                                 component="img"
                                 sx={{

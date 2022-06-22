@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const Team = ({ teamData }) => (
@@ -7,10 +8,13 @@ const Team = ({ teamData }) => (
 
         <div className="card" data-aos="fade" key={index}>
           <div className="imgBx">
-            <img
+            <Image
               src={member.photo_url}
               alt={member.name}
-              className="w-full"
+              className="w-full hover:opacity-50 transition-all"
+              width="100%"
+              layout='fill'
+              loading='lazy'
             />
           </div>
           <div className="content">
