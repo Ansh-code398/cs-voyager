@@ -18,19 +18,19 @@ const Impact = () => {
                                 <div className="metric-card bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4 max-w-72 w-full" style={{ cursor: 'auto' }}>
                                     <div className="flex items-center text-gray-900 dark:text-gray-100" style={{ cursor: 'auto' }}>Posts</div>
                                     <p className="mt-2 text-3xl font-bold spacing-sm text-black dark:text-white" style={{ cursor: 'auto' }}>
-                                        <CountUp start={0} end={100} suffix="+ posts and videos" duration={2} />
+                                        <CountUp start={0} end={100} suffix="+ posts and videos" duration={3} />
                                     </p>
                                 </div>
                                 <div className="metric-card bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4 max-w-72 w-full" style={{ cursor: 'auto' }}>
                                     <div className="flex items-center text-gray-900 dark:text-gray-100" style={{ cursor: 'auto' }}>Views</div>
-                                    <p className="mt-2 text-3xl font-bold spacing-sm text-black dark:text-white" style={{ cursor: 'auto' }}><CountUp start={0} end={10000} suffix="+" duration={2} /></p>
+                                    <p className="mt-2 text-3xl font-bold spacing-sm text-black dark:text-white" style={{ cursor: 'auto' }}><CountUp start={0} end={10000} suffix="+" duration={3} /></p>
                                 </div>
                             </div>
                             <div className="grid gap-4 grid-cols-1 sm:grid-cols-1 my-2 w-full">
                                 <div className="metric-card bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-4 max-w-72 w-full" style={{ cursor: 'auto' }}>
                                     <div className="flex items-center text-gray-900 dark:text-gray-100" style={{ cursor: 'auto' }}>Followers</div>
 
-                                    <p className="mt-2 text-3xl font-bold spacing-sm text-black dark:text-white" style={{ cursor: 'auto' }}><CountUp start={0} end={100} suffix="+ Total Followers" duration={2} /></p>
+                                    <p className="mt-2 text-3xl font-bold spacing-sm text-black dark:text-white" style={{ cursor: 'auto' }}><CountUp start={0} end={100} suffix="+ Total Followers" duration={3} /></p>
                                 </div>
                             </div>
                         </div>}
